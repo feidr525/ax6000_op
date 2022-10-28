@@ -16,7 +16,7 @@ A template for building OpenWrt with GitHub Actions
 - xiaorouji
 - vernesong
 - ...
-默认ip WIFI 啥的自己修改X-WRT里面的diy1
+默认ip WIFI 啥的自己修改X-WRT里面的diy22
 还原默认隐藏的菜单
 去掉了设置向导
 
