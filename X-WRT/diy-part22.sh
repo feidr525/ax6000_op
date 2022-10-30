@@ -41,6 +41,17 @@ git clone https://github.com/sbwml/luci-app-alist package/alist
 rm -rf feeds/packages/lang/golang
 svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
 
+# Zerotier
+svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-zerotier feeds/luci/applications/luci-app-zerotier
+#wget -P feeds/luci/applications/luci-app-zerotier/ https://github.com/QiuSimons/OpenWrt-Add/raw/master/move_2_services.sh
+#chmod -R 755 ./feeds/luci/applications/luci-app-zerotier/move_2_services.sh
+pushd feeds/luci/applications/luci-app-zerotier
+#bash move_2_services.sh
+popd
+ln -sf ../../../feeds/luci/applications/luci-app-zerotier ./package/feeds/luci/luci-app-zerotier
+rm -rf ./feeds/packages/net/zerotier
+svn export https://github.com/immortalwrt/packages/trunk/net/zerotier feeds/packages/net/zerotier
+    
 #增加argon主题
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci/luci-app-argon-config
 git clone https://github.com/jerrykuku/luci-theme-argon package/luci/luci-theme-argon
