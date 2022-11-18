@@ -143,7 +143,7 @@ jobs:
     
         
     - name: upload .config to WETRANSFER
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || (github.event.inputs.ssh == 'true' && !cancelled())
+      #if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || (github.event.inputs.ssh == 'true' && !cancelled())
       run: |
         cd openwrt
         ./scripts/diffconfig.sh > diffconfig
