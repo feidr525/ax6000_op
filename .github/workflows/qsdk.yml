@@ -32,8 +32,8 @@ on:
     
   
 env:
-  REPO_URL: https://github.com/x-wrt/x-wrt
-  REPO_BRANCH: 22.03_b202210282250
+  REPO_URL: https://github.com/padavanonly/immortalwrtARM
+  REPO_BRANCH: mt7986
   FEEDS_CONF: feeds.conf.default
   #CONFIG_FILE: .config
   CONFIG_FILE: qsdk/.config
