@@ -10,7 +10,7 @@
 
 
 
-name: x-wrt
+name: qsdk
 
 on:
   repository_dispatch:
@@ -43,7 +43,7 @@ env:
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -105,9 +105,7 @@ jobs:
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        echo "CONFIG_VERSION_NUMBER=\"$REPO_BRANCH\"" >> $CONFIG_FILE
-        cp X-WRT/banner openwrt/package/base-files/files/etc/banner
-        chmod +x $DIY_P1_SH
+       chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
     
@@ -148,8 +146,9 @@ jobs:
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || (github.event.inputs.ssh == 'true' && !cancelled())
       run: |
         cd openwrt
+        ./scripts/diffconfig.sh > diffconfig
         curl -fsSL git.io/file-transfer | sh
-        ./transfer wet -s -p 16 --no-progress .config 2>&1 | tee wetransfer.log
+        ./transfer wet -s -p 16 --no-progress diffconfig 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
 
