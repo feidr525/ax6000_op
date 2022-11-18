@@ -10,7 +10,6 @@ sed -i 's/WPAPSK1=12345678/WPAPSK1=88896825/g' package/mtk/luci-app-mtwifi/files
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 git clone https://github.com/sirpdboy/netspeedtest package/netspeedtest
 #KMS
-git clone https://github.com/cokebar/luci-app-vlmcsd.git package/luci/luci-app-vlmcsd
-git clone https://github.com/cokebar/openwrt-vlmcsd.git package/luci/openwrt-vlmcsd
-#DDNS-GO
-git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci/ddns-go
+#git clone https://github.com/cokebar/luci-app-vlmcsd.git package/luci/luci-app-vlmcsd
+#git clone https://github.com/cokebar/openwrt-vlmcsd.git package/luci/openwrt-vlmcsd
+
