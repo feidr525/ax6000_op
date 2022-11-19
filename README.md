@@ -16,8 +16,8 @@ A template for building OpenWrt with GitHub Actions
 
 
 
-默认ip WIFI 啥的自己修改对应源码文件夹里面的diy22
-
+默认ip WIFI 啥的自己修改对应文件夹里面的diy22
+修改插件就去对应文件夹config修改 mosdns跟netspeedtest挺大的
 x-wrt还原默认隐藏的菜单和去掉了设置向导
 
 加的插件有：
@@ -29,5 +29,5 @@ x-wrt还原默认隐藏的菜单和去掉了设置向导
 - vlmcsd  KMS服务
 - ALIST(mtk的没有)
 - 主题默认argon  默认配置只有一个主题 
-- mtk有netspeedtest测试 不要要就直接去掉
+- mtk有netspeedtest测速
 
