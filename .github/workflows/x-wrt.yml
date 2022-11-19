@@ -36,7 +36,7 @@ env:
   REPO_BRANCH: 22.03_b202210282250
   FEEDS_CONF: feeds.conf.default
   #CONFIG_FILE: .config
-  CONFIG_FILE: x6000.config
+  CONFIG_FILE: X-WRT/x6000.config
   DIY_P1_SH: X-WRT/diy-part11.sh
   DIY_P2_SH: X-WRT/diy-part22.sh
   UPLOAD_BIN_DIR: false

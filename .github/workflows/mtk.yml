@@ -10,7 +10,7 @@
 
 
 
-name: qsdk
+name: mtk
 
 on:
   repository_dispatch:
@@ -36,9 +36,9 @@ env:
   REPO_BRANCH: mt7986
   FEEDS_CONF: feeds.conf.default
   #CONFIG_FILE: .config
-  CONFIG_FILE: qsdk/test.config
-  DIY_P1_SH: qsdk/diy-part11.sh
-  DIY_P2_SH: qsdk/diy-part22.sh
+  CONFIG_FILE: mtksdk/mtk.config
+  DIY_P1_SH: mtksdk/diy-part11.sh
+  DIY_P2_SH: mtksdk/diy-part22.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
