@@ -5,6 +5,12 @@ sed -i 's/WPAPSK1=12345678/WPAPSK1=88896825/g' package/mtk/luci-app-mtwifi/files
 sed -i 's/WPAPSK1=12345678/WPAPSK1=88896825/g' package/mtk/luci-app-mtwifi/files/mt7615.2.dat
 
 
+#增加mosdns
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone https://github.com/sbwml/luci-app-mosdns.git package/luci-app-mosdns
+git clone https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
+
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 git clone https://github.com/sirpdboy/netspeedtest package/netspeedtest
 
