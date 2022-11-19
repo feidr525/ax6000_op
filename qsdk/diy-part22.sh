@@ -1,4 +1,4 @@
-sed -i 's/192.168.6.1/192.168.1.1253/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.6.1/192.168.1.253/g' package/base-files/files/bin/config_generate
 sed -i 's/SSID1=Redmi_AX6000_5G/SSID1=openwrt/g' package/mtk/luci-app-mtwifi/files/mt7615.2.dat
 sed -i 's/SSID1=Redmi_AX6000_2G/SSID1=openwrt_2.4/g' package/mtk/luci-app-mtwifi/files/mt7615.1.dat
 sed -i 's/WPAPSK1=12345678/WPAPSK1=password/g' package/mtk/luci-app-mtwifi/files/mt7615.1.dat
