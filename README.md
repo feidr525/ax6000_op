@@ -25,6 +25,7 @@ x-wrt还原默认隐藏的菜单和去掉了设置向导
 - mosdns
 - passwall
 - DDNS-GO
+- openvpn
 - vlmcsd  KMS服务
 - ALIST(mtk的没有)
 - 主题默认argon  默认配置只有一个主题 
